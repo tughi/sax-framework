@@ -1,0 +1,4 @@
+apply plugin: 'java'
+
+group = 'com.tughi.xml'
+version = '1.0'
