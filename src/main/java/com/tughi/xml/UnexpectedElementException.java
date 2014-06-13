@@ -4,8 +4,8 @@ import org.xml.sax.SAXException;
 
 public class UnexpectedElementException extends SAXException {
 
-    public UnexpectedElementException(String uri, String name) {
-        super(uri.length() > 0 ? uri + ":" + name : name);
-    }
+	public UnexpectedElementException(String namespace, String name) {
+		super(namespace.length() > 0 ? namespace + ":" + name : name);
+	}
 
 }

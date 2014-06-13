@@ -4,19 +4,24 @@ import org.xml.sax.SAXException;
 
 public class Document extends Element {
 
-    public ContentHandler getContentHandler() {
-        return new ContentHandler(this);
-    }
+	public ContentHandler getContentHandler() {
+		return new ContentHandler(this);
+	}
 
-    @Override
-    public Element getChild(String uri, String name) throws SAXException {
-        Element child = super.getChild(uri, name);
+	@Override
+	public Element getChild(String namespace, String name) throws SAXException {
+		Element child = super.getChild(namespace, name);
 
-        if (child == null) {
-            throw new UnexpectedElementException(uri, name);
-        }
+		if (child == null) {
+			throw new UnexpectedElementException(namespace, name);
+		}
 
-        return child;
-    }
+		return child;
+	}
+
+	@Override
+	public String toString() {
+		return "<DOC>";
+	}
 
 }
