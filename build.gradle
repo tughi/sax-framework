@@ -2,3 +2,7 @@ apply plugin: 'java'
 
 group = 'com.tughi.xml'
 version = '2.0'
+
+sourceCompatibility = 1.6
+targetCompatibility = 1.6
+
