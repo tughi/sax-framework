@@ -1,8 +1,15 @@
 apply plugin: 'java'
-
-group = 'com.tughi.xml'
-version = '2.0'
+apply plugin: 'maven'
 
 sourceCompatibility = 1.6
 targetCompatibility = 1.6
 
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: new File(System.properties['user.home'], 'Dropbox/Public/maven-repository').toURI())
+            pom.groupId = 'com.tughi'
+            pom.version = '2.0'
+        }
+    }
+}
