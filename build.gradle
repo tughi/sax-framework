@@ -8,7 +8,7 @@ uploadArchives {
     repositories {
         mavenDeployer {
             repository(url: new File(System.properties['user.home'], 'Dropbox/Public/maven-repository').toURI())
-            pom.groupId = 'com.tughi'
+            pom.groupId = 'com.tughi.sax'
             pom.version = '2.0'
         }
     }
