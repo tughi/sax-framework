@@ -7,7 +7,7 @@ targetCompatibility = 1.6
 uploadArchives {
     repositories {
         mavenDeployer {
-            repository(url: new File(System.properties['user.home'], 'Dropbox/Public/maven-repository').toURI())
+            repository(url: new File('repository').toURI())
             pom.groupId = 'com.tughi.sax'
             pom.version = '2.0'
         }
