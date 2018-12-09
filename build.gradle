@@ -9,7 +9,7 @@ uploadArchives {
         mavenDeployer {
             repository(url: new File('repository').toURI())
             pom.groupId = 'com.tughi.sax'
-            pom.version = '2.0'
+            pom.version = '2.0.1'
         }
     }
 }
